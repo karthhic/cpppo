@@ -35,7 +35,8 @@ def wdint(btag,val):                                         # Function to write
 def wbool(btag,state):                                       # Function to write a BOOL value to a tag.
     TagData("wr",str(btag)+"=(BOOL)" + str(state), IP)
 #---------------------------Sample inputs----------------------------------
-#TagData("rd","Tag_Name", "192.168.0.1")
-#output = TagData("rd","Tag_Name", "192.168.0.2")
-#print (output[5])
-#TagData("wr","Tag_Name=(DINT)%i" % (output[5]), "192.168.0.3")
+PushButton("Tag1",0.5)
+wbool("Tag2","False")
+read("Tag3")
+wdint("Tag4",12345)
+
